@@ -187,6 +187,7 @@
     <service id="App\Controller\ArticleController" class="App\Controller\ArticleController" public="true" autowire="true" autoconfigure="true">
       <tag name="controller.service_arguments"/>
       <tag name="container.service_subscriber"/>
+      <argument>true</argument>
       <call method="setContainer">
         <argument type="service" id=".service_locator.lz9K0Vz.App\Controller\ArticleController"/>
       </call>

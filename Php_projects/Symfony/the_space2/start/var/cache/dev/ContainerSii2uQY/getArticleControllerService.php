@@ -10,7 +10,7 @@ include_once $this->targetDirs[3].'/vendor/symfony/framework-bundle/Controller/C
 include_once $this->targetDirs[3].'/vendor/symfony/framework-bundle/Controller/AbstractController.php';
 include_once $this->targetDirs[3].'/src/Controller/ArticleController.php';
 
-$this->services['App\\Controller\\ArticleController'] = $instance = new \App\Controller\ArticleController();
+$this->services['App\\Controller\\ArticleController'] = $instance = new \App\Controller\ArticleController(true);
 
 $instance->setContainer((new \Symfony\Component\DependencyInjection\Argument\ServiceLocator($this->getService, [
     'http_kernel' => ['services', 'http_kernel', 'getHttpKernelService', false],
